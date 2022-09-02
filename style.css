@@ -1,0 +1,99 @@
+body{
+
+    background-color: #18171c;
+
+}
+
+
+.texto{
+
+    color: white;
+    font: #FFF;
+    position: absolute;
+    top: 110px;
+    right: 900px;
+    height: 30px;
+    background: rgba(0, 0, 0, 0);
+    border-color: #9ecaed;
+    border-radius:10px;
+    box-shadow: 0 0 10px #9ecaed;
+    outline: none;
+    resize:none;
+}
+
+::placeholder{
+
+    font-size: 20px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+   
+
+    
+}
+
+
+
+.textoingresado{
+
+    color: white;
+    position: absolute;
+    top: 110px;
+    right: 100px;
+    background-color: #00b09c;
+    border-color: #9ecaed;
+    border-radius:10px;
+    box-shadow: 0 0 10px #9ecaed;
+    background-color: #18171c;
+    font-family: Arial, Helvetica, sans-serif;
+    resize:none;
+    
+}
+
+
+#boton1{
+
+    position: absolute;
+    top: 550px;
+    right: 1050px;
+    height: 30px;
+    outline: none; 
+    border-color: #9ecaed;
+    border-radius:10px;
+    box-shadow: 0 0 10px #9ecaed;
+}
+
+#boton2{
+
+    position: absolute;
+    top: 550px;
+    right: 900px;
+    height: 30px;
+    outline: none; 
+    border-color: #9ecaed;
+    border-radius:10px;
+    box-shadow: 0 0 10px #9ecaed;
+} 
+
+#botonCopiar{
+
+    position: absolute;
+    top: 550px;
+    right: 160px;
+    height: 30px;
+    outline: none; 
+    border-color: #9ecaed;
+    border-radius:10px;
+    box-shadow: 0 0 10px #9ecaed;
+
+}   
+
+#textoingresado{
+
+    border-color: #9ecaed;
+    border-radius:10px;
+    box-shadow: 0 0 10px #9ecaed;
+    background-color: #18171c;
+    font-family: Arial, Helvetica, sans-serif;
+
+
+}
+
