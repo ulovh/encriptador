@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+
+
+<html>
+
+    <head lang="es">
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="../JS/encriptador1.css">
+        
+    
+    </head>
+
+    <body>
+
+        <header><title>Encriptador/Desenciptador</title></header>
+
+        <main>
+
+            <section>
+
+                <textarea class="texto" id="texto" style="width: 20%; height: 400px; text-transform:lowercase;" onkeypress="return (event.charCode >= 77 && event.charCode <= 122 )" placeholder="Ingrese algún texto..."></textarea>
+
+            </section>
+
+            <section>
+
+                <textarea class="textoingresado" id="textoingresado" style="width: 20%; height: 400px; text-transform:lowercase;" placeholder = "No se ha encontrado nada..."></textarea>
+
+            </section>
+
+            <section class="butones">
+
+                <button type="button" id="boton1" style="width: 10%; height: 40px;" onClick="Encriptar()"><strong>Encriptar</strong></button>
+                <button type="button" id="boton2" style="width: 10%; height: 40px;" onClick="desencriptar()"><strong>Desencriptar</strong></button>       
+                <button type="button" id="botonCopiar" style="width: 10%; height: 40px;" onClick="Copiar()"><strong>Copiar</strong></button>
+
+            </section>
+
+        </main>
+
+
+    </body>
+
+
+
+</html>
+    
+<script>
+
+    texto.focus()
+
+
+    function Encriptar(){
+
+        var texto1 = document.getElementById("texto").value;
+
+        var encontrado = {
+            a:"enter",
+            e:"imes",
+            i:"ai",
+            o:"ober",
+            u:"ufta",
+        }
+        texto1 = texto1.replace(/[aeiou]/g, function(matched){
+            return encontrado[matched];           
+
+        });
+
+
+     
+        document.getElementById("textoingresado").innerHTML = texto1;
+              
+}
+
+
+
+
+    function desencriptar(){
+
+
+        var texto2 = document.getElementById("texto").value
+
+        
+    
+        texto2 = texto2.replace(/enter/gi, "a", function(matched){
+            return encontrado1[matched];
+            
+        });
+            
+        texto2 = texto2.replace(/imes/gi, "e", function(matched){
+            return encontrado1[matched];
+
+        });
+
+        texto2 = texto2.replace(/ai/gi, "i", function(matched){
+            return encontrado1[matched];
+
+        });
+
+        texto2 = texto2.replace(/ober/gi, "o", function(matched){
+            return encontrado1[matched];
+
+        });
+
+        texto2 = texto2.replace(/ufta/gi, "u", function(matched){
+            return encontrado1[matched];
+
+        });
+       
+  
+        document.getElementById("textoingresado").innerHTML = texto2;
+
+    }
+
+        function Copiar(){
+
+            var cp = document.getElementById("textoingresado");
+
+            cp.select();
+            document.execCommand("copy");
+
+            alert("Texto copiado")
+
+        }
+
+    
+
+
+</script>
